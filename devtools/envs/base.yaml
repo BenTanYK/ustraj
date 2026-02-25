@@ -7,6 +7,9 @@ dependencies:
 
   - python >=3.10
   - pip
+  - pandas
+  - numpy
+  - mdanalysis ==2.9.0
 
   - click
 
