@@ -22,15 +22,15 @@ jobs:
         apt update && apt install -y git make
 
         make env
-        
+
         make lint
         make test
-        
+
         make docs
 
     - name: CodeCov
-      uses: codecov/codecov-action@v4.1.1
+      uses: codecov/codecov-action@v3.1.1
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage.xml
         flags: unittests
-        token: ${{ secrets.CODECOV_TOKEN }}
