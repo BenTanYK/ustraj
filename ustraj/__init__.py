@@ -2,11 +2,12 @@
 collected during US simulations"""
 
 import importlib.metadata
-from . import analysis
+from .analysis import count_hbonds
+from .analysis import calc_solvent_rdf
 
 try:
     __version__ = importlib.metadata.version("ustraj")
 except importlib.metadata.PackageNotFoundError:  # pragma: no cover
     __version__ = "0+unknown"
 
-__all__ = ["__version__", "analysis"]
+__all__ = ["__version__", "count_hbonds", "calc_solvent_rdf"]
